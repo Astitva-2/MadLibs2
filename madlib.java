@@ -1,16 +1,23 @@
-import java.util.Scanner;
-
+import java.util.Scanner; //Imports the scanner class, allowing user input
+/* 
+Raghuveer did the initialization (public class, creation of original Story and scanner
+Ryan added the ability to ask user input for all of the blanks
+Jags allows the user input to replace the brackets with the user input
+Aakarsh made the program be able to replace all of the brackets with user inputs and store it in a varable
+Calvin added documentation, final output and checked the code for errors/final test
+*/
 public class madlib {
     public static void main(String[] args) {
-
+        //The story which would be used as a reference for the program
         String originalStory = "I bent down to tie my shoe at the supermarket, but let out a [adjective] \"[sound]\" that shook the entire [food] aisle. Startled, [person], dropped an open jar of [snack] and began [verb-ing] toward the bakery section. Their bright [color] [piece of clothing] immediately ripped down the middle horrifying a family of [number] trying to buy [food]. In confusion a stray [animal] snatched a handful of [noun] off the shelf, swallowed it whole, and screamed \"[word]\". The store manager slowly closed the blinds in his office and pretended he was blind.";
 
         System.out.println("Original Story:\n" + originalStory + "\n");
 
-        Scanner scanner = new Scanner(System.in);
+        Scanner scanner = new Scanner(System.in); //Initializing Scanner
 
-        System.out.println("Answer each prompt and press Enter.\n");
+        System.out.println("Answer each prompt and press Enter.\n"); //Instructions for the user 
 
+        ///For each of the [blanks], the user has to input a text and have it saved within the variable
         System.out.print("Enter an adjective (e.g. enormous): ");
         String adjective = scanner.nextLine();
 
@@ -50,6 +57,7 @@ public class madlib {
         System.out.print("Enter a word to scream (e.g. banana): ");
         String word = scanner.nextLine();
 
+        //Process where they replace all bracket placeholder (ex: [adjective]) with the user input
         int bracketLocation1 = originalStory.indexOf("[");
         int bracketLocation2 = originalStory.indexOf("]");
         String newstory = originalStory.substring(0, bracketLocation1) + adjective + originalStory.substring(bracketLocation2 + 1);
@@ -57,7 +65,6 @@ public class madlib {
         int bracketLocation3 = newstory.indexOf("[");
         int bracketLocation4 = newstory.indexOf("]");
         newstory = newstory.substring(0, bracketLocation3) + sound + newstory.substring(bracketLocation4 + 1);
-
 
         int bracketLocation5 = newstory.indexOf("[");
         int bracketLocation6 = newstory.indexOf("]");
@@ -104,6 +111,9 @@ public class madlib {
         int bracketLocation25 = newstory.indexOf("[");
         int bracketLocation26 = newstory.indexOf("]");
         newstory = newstory.substring(0, bracketLocation25) + word + newstory.substring(bracketLocation26 + 1);
+
+        System.out.println(newstory); //prints out the story plus the revisions caused by user input
+        scanner.close() //prevent further issues by disabling user input after finishing
 
 
 
