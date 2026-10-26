@@ -14,10 +14,7 @@ Created clear instructions for the user.
 
 Jags - Removed one placeholder and replaced it with the User input. Creates a template for the next code writer to continue to replace the rest of the placeholders using my code as the basis.
 
-Aakarsh— String Manipulation (Remaining Placeholders)
-Write the code to process the other placeholders.
-Combine the story sections with the user's responses.
-Ensure the placeholders are removed.
+Aakarsh— Continuing creating subscripts to add to the newstory variable
 
 Calvin — Final Output and Integration
 Write the code that prints the completed story.
