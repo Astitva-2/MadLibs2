@@ -113,7 +113,7 @@ public class madlib {
         newstory = newstory.substring(0, bracketLocation25) + word + newstory.substring(bracketLocation26 + 1);
 
         System.out.println(newstory); //prints out the story plus the revisions caused by user input
-        scanner.close() //prevent further issues by disabling user input after finishing
+        scanner.close(); //prevent further issues by disabling user input after finishing
 
 
 
